@@ -11,7 +11,7 @@ cd $WORKDIR
 POSTNAME=$1
 CATEGIORY=$2
 
-if [[$CATEGIORY == ""]]; then
+if [[ -z $CATEGIORY ]]; then
     CATEGIORY="misc"
 fi
 POSTFILE="${WORKDIR}/_posts/$(date +%F)-${POSTNAME// /-}.markdown"
