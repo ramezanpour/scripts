@@ -5,6 +5,12 @@
 
 DOTFILES=~/dev/dotfiles
 
+COMMITMSG=$1
+
+if [[ -z $COMMITMSG ]]; then
+    COMMITMSG="Update configurations."
+fi
+
 # ZSH
 cp $HOME/.zshrc $DOTFILES/.zshrc
 # Neovim
@@ -22,5 +28,5 @@ cp $HOME/.newsboat/* $DOTFILES/newsboat
 cd $DOTFILES
 
 git add .
-git commit -m "Update dotfiles"
+git commit -m "${COMMITMSG}"
 git push
