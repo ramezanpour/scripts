@@ -22,4 +22,5 @@ layout: post
 date: $(date +'%F %T')
 categories: ${CATEGIORY}
 ---" > $POSTFILE
+cd $WORKDIR
 nvim $POSTFILE
